@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.FlagController">
+    <top>
+        <VBox alignment="CENTER" spacing="10" padding="10">
+            <Label text="Выберите цвет для каждой полосы флага:" />
+
+            <HBox spacing="20">
+                <VBox>
+                    <Label text="Первая полоса" />
+                    <ToggleGroup fx:id="firstColorGroup">
+                        <RadioButton text="Красный" toggleGroup="$firstColorGroup" />
+                        <RadioButton text="Зелёный" toggleGroup="$firstColorGroup" />
+                        <RadioButton text="Белый" toggleGroup="$firstColorGroup" />
+                    </ToggleGroup>
+                </VBox>
+
+                <VBox>
+                    <Label text="Вторая полоса" />
+                    <ToggleGroup fx:id="secondColorGroup">
+                        <RadioButton text="Синий" toggleGroup="$secondColorGroup" />
+                        <RadioButton text="Желтый" toggleGroup="$secondColorGroup" />
+                        <RadioButton text="Оранжевый" toggleGroup="$secondColorGroup" />
+                    </ToggleGroup>
+                </VBox>
+
+                <VBox>
+                    <Label text="Третья полоса" />
+                    <ToggleGroup fx:id="thirdColorGroup">
+                        <RadioButton text="Черный" toggleGroup="$thirdColorGroup" />
+                        <RadioButton text="Розовый" toggleGroup="$thirdColorGroup" />
+                        <RadioButton text="Коричневый" toggleGroup="$thirdColorGroup" />
+                    </ToggleGroup>
+                </VBox>
+            </HBox>
+
+            <Button text="Нарисовать" onAction="#drawFlag" />
+        </VBox>
+    </top>
+
+    <bottom>
+        <Label fx:id="resultLabel" text="Здесь появится результат." alignment="CENTER" padding="10" />
+    </bottom>
+</BorderPane>

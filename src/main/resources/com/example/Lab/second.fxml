@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.Lab.OrderController">
+    <children>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <children>
+                <Label text="Выберите блюдо:"/>
+                <ComboBox fx:id="dishComboBox"/>
+                <Label text="Количество:"/>
+                <TextField fx:id="quantityField" prefWidth="50" text="1"/>
+                <Button text="Добавить в заказ" onAction="#addDishToOrder"/>
+            </children>
+        </HBox>
+
+        <TableView fx:id="orderTable" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="dishColumn" text="Блюдо" prefWidth="200"/>
+                <TableColumn fx:id="quantityColumn" text="Кол-во" prefWidth="100"/>
+                <TableColumn fx:id="totalColumn" text="Стоимость" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+        <Label fx:id="totalCostLabel" text="Суммарная стоимость: 0 руб."/>
+    </children>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</VBox>

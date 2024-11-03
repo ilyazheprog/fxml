@@ -1,0 +1,7 @@
+module com.example.Lab {
+    requires javafx.controls;
+    requires javafx.fxml;
+
+    opens com.example.Lab to javafx.fxml;
+    exports com.example.Lab;
+}

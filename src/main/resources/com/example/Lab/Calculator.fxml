@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.CalculatorController">
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <TextField fx:id="display" editable="false" />
+            <HBox spacing="10">
+                <Button text="7" onAction="#onDigitPressed" />
+                <Button text="8" onAction="#onDigitPressed" />
+                <Button text="9" onAction="#onDigitPressed" />
+                <Button text="+" onAction="#onOperationPressed" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="4" onAction="#onDigitPressed" />
+                <Button text="5" onAction="#onDigitPressed" />
+                <Button text="6" onAction="#onDigitPressed" />
+                <Button text="-" onAction="#onOperationPressed" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="1" onAction="#onDigitPressed" />
+                <Button text="2" onAction="#onDigitPressed" />
+                <Button text="3" onAction="#onDigitPressed" />
+                <Button text="*" onAction="#onOperationPressed" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="0" onAction="#onDigitPressed" />
+                <Button text="." onAction="#onDigitPressed" />
+                <Button text="=" onAction="#onEqualsPressed" />
+                <Button text="/" onAction="#onOperationPressed" />
+            </HBox>
+            <Button text="C" onAction="#onClearPressed" />
+        </VBox>
+    </center>
+</BorderPane>
